@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('content_raw');
             $table->text('content_html');
             $table->boolean('is_published')->default(false);
-            $table->timestamp('pablished_at')->nullable();
+            $table->timestamp('published_at')->nullable();
             $table->string('image')->nullable();
             $table->unsignedBigInteger('likes')->default(0);
             $table->timestamps();
