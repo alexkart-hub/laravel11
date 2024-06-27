@@ -29,7 +29,7 @@ class BlogCategoriesTableSeeder extends Seeder
         ];
 
         for ($i = 1; $i <= 10; $i++) {
-            $name     = sprintf('Категория #%d', $i);
+            $name     = sprintf('Категория %d', $i);
             $parentId = $i > 4 ? rand(1, 4) : 1;
 
             $categories[] = [
