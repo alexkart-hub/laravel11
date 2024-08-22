@@ -3,10 +3,13 @@ Categories
     <li>
         <a href="/">Главная</a>
     </li>
+</ul>
+<ul>
+@foreach( $categories as $category)
     <li>
-        <a href="/category/one">Раздел 1</a>
+        <a href="{{ route('blog.categories.show', ['category' => $category->slug]) }}">
+            {{ $category->title }}
+        </a>
     </li>
-    <li>
-        <a href="/category/two">Раздел 2</a>
-    </li>
+@endforeach
 </ul>

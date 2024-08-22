@@ -16,6 +16,6 @@ class BlogCategory extends Controller
 
     public function category(string $category): View|Application|Factory|ContractsApplication
     {
-        return view('category', ['category' => $category, 'request' => $this->request]);
+        return view('category', ['category' => $category]);
     }
 }

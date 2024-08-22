@@ -1,4 +1,4 @@
-Category <?=$category?>
+Category {{ $category }}
 <ul>
     <li>
         <a href="/">Главная</a>
@@ -7,4 +7,13 @@ Category <?=$category?>
         <a href="/category">Разделы</a>
     </li>
 </ul>
-<?php dump($request) ?>
+
+<ul>
+    @foreach( $posts as $post)
+        <li>
+            <a href="{{ route('blog.post', ['category' => $category, 'post' => $post->slug]) }}">
+                {{ $post->title }}
+            </a>
+        </li>
+    @endforeach
+</ul>
