@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Blog;
 
-use App\Models\BlogCategory;
-use App\Models\BlogPost;
+use App\Data\Page\PostPage;
 
 class PostController extends BaseController
 {
     public function index(string $category, string $post)
     {
-        $post = BlogPost::where('slug', $post)->first();
-        $category = BlogCategory::where('slug', $category)->first();
-        return view('post', ['category' => $category, 'post' => $post]);
+        $page = (new PostPage())
+            ->setCategoryCode($category)
+            ->setPostCode($post);
+        return $this->returnView($page);
     }
 }

@@ -1,0 +1,24 @@
+body {
+  font-family: Ubuntu; }
+
+header {
+  margin-bottom: 15px;
+  height: 70px; }
+  header a {
+    text-decoration: none; }
+    header a .logo-text {
+      font-size: 34px;
+      font-weight: bolder;
+      color: #fff; }
+  header .logo {
+    background-color: #2075bf;
+    padding: 10px;
+    text-align: center;
+    margin-left: 0;
+    height: 100%; }
+  header .top-menu {
+    border-bottom: 1px solid #5a6268; }
+    header .top-menu .navbar {
+      height: 100%; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,44 @@
+body {
+  font-family: Ubuntu;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+header {
+  margin-bottom: 15px; }
+  header a {
+    text-decoration: none; }
+    header a .logo-text {
+      font-size: 34px;
+      font-weight: bolder;
+      color: #fff; }
+  header .logo {
+    background-color: #2075bf;
+    padding: 10px;
+    text-align: center;
+    margin-left: 0;
+    height: 100%; }
+  header .top-menu {
+    border-bottom: none; }
+    header .top-menu .navbar {
+      height: 100%; }
+
+.content {
+  flex-grow: 1; }
+
+footer {
+  border-top: 1px solid #2075bf;
+  background-color: rgba(32, 117, 191, 0.3);
+  height: 50px;
+  flex-shrink: 0; }
+
+@media (min-width: 992px) {
+  header .top-menu {
+    border-bottom: 1px solid #2075bf;
+    background-color: rgba(32, 117, 191, 0.3); }
+  header .navbar-expand-lg .nav-item .nav-link {
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase; } }
+
+/*# sourceMappingURL=main.css.map */

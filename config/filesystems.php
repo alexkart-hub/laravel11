@@ -71,6 +71,8 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('build/template/css') => resource_path('views/template/css'),
+        public_path('build/template/js') => resource_path('views/template/js'),
     ],
 
 ];

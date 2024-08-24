@@ -1,15 +1,22 @@
+@extends('app.layout.index')
+@section('content')
+    @php
+        /** @var  App\Data\Page\Dto\CategoriesPageDto $data */
+            $categories = $data->categories;
+    @endphp
 Categories
-<ul>
-    <li>
-        <a href="/">Главная</a>
+<ul class="menu">
+    <li class="menu_item">
+        <a class="menu_item_link" href="/">Главная</a>
     </li>
 </ul>
-<ul>
+<ul class="menu">
 @foreach( $categories as $category)
-    <li>
-        <a href="{{ route('blog.categories.show', ['category' => $category->slug]) }}">
+    <li class="menu_item">
+        <a class="menu_item_link" href="{{ route('blog.categories.show', ['category' => $category->slug]) }}">
             {{ $category->title }}
         </a>
     </li>
 @endforeach
 </ul>
+@endsection

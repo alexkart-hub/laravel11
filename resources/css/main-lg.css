@@ -1,0 +1,10 @@
+@media (min-width: 992px) {
+  header .top-menu {
+    border-bottom: 1px solid #2075bf;
+    background-color: rgba(32, 117, 191, 0.3); }
+  header .navbar-expand-lg .nav-item .nav-link {
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase; } }
+
+/*# sourceMappingURL=main-lg.css.map */

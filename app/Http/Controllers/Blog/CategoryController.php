@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Blog;
 
-use App\Models\BlogCategory;
+use App\Data\Page\CategoryPage;
 use Illuminate\Http\Request;
 
 class CategoryController extends BaseController
@@ -12,8 +12,8 @@ class CategoryController extends BaseController
      */
     public function index()
     {
-        $categories = BlogCategory::all();
-        return view('categories', compact('categories'));
+        $page = new CategoryPage();
+        return $this->returnView($page);
     }
 
     /**
@@ -37,9 +37,10 @@ class CategoryController extends BaseController
      */
     public function show(string $category)
     {
-        $posts = BlogCategory::where('slug', $category)->first()->posts;
+        $page = (new CategoryPage())
+            ->setCategoryCode($category);
 
-        return view('category', ['category' => $category, 'posts' => $posts]);
+        return $this->returnView($page);
     }
 
     /**

@@ -1,0 +1,54 @@
+body {
+    font-family: Ubuntu;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+h1.page-404 {
+    font-size: 10em;
+    font-weight: bolder;
+}
+
+header {
+    margin-bottom: 15px;
+
+    a {
+        text-decoration: none;
+
+        .logo-text {
+            font-size: 34px;
+            font-weight: bolder;
+            color: #fff;
+        }
+
+    }
+
+    .logo {
+        background-color: #2075bf;
+        padding: 10px;
+        text-align: center;
+        margin-left: 0;
+        height: 100%;
+    }
+
+    .top-menu {
+        border-bottom: none;
+        .navbar {
+            height: 100%;
+        }
+    }
+}
+
+.content {
+    flex-grow: 1
+}
+
+footer {
+    border-top: 1px solid #2075bf;
+    background-color: rgba(32,117,191,.3);
+    height: 50px;
+    flex-shrink: 0;
+}
+
+@import "main-lg";

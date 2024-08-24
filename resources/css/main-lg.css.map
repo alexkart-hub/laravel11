@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,yBAA0B;EAElB,gBAAU;IACN,aAAa,EAAE,iBAAiB;IAChC,gBAAgB,EAAE,uBAAmB;EAKjC,4CAAU;IACN,SAAS,EAAE,IAAI;IACf,WAAW,EAAE,MAAM;IACnB,cAAc,EAAE,SAAS",
+"sources": ["main-lg.scss"],
+"names": [],
+"file": "main-lg.css"
+}

@@ -1,6 +1,6 @@
-Здесь будет главная страница
-<ul>
-    <li>
-        <a href="/category">Разделы</a>
-    </li>
-</ul>
+@extends('app.layout.index')
+@section('content')
+    <section class="container mb-4 last-posts">
+
+    </section>
+@endsection
