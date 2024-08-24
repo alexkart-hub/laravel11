@@ -12,6 +12,19 @@ class BlogCategory extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'parent_id',
+        'slug',
+        'title',
+        'description',
+        'level',
+        'margin_left',
+        'margin_right',
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
     public function posts(): HasMany
     {
         return $this->hasMany(BlogPost::class, 'category_id')
