@@ -2,30 +2,30 @@
 
 namespace App\Console\Commands;
 
-use App\Services\CategoryLevelService;
+use App\Services\CategoryMarginServices;
 use Illuminate\Console\Command;
 
-class fill_level_categories extends Command
+class set_margin extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'categories:fill_level';
+    protected $signature = 'categories:set_margin';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Заполнение уровней вложенности категорий';
+    protected $description = 'Command description';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        (new CategoryLevelService())->fill();
+        (new CategoryMarginServices())->calculate();
     }
 }
