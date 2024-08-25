@@ -15,7 +15,7 @@
             <a href="{{ route('blog.categories.index') }}">Разделы</a>
         </li>
         <li>
-            <a href="{{ route('blog.categories.show', ['category' => $category->slug]) }}">{{ $category->title }}</a>
+            <a href="{{ route('blog.categories.show', ['category' => $data->categoryChain]) }}">{{ $category->title }}</a>
         </li>
     </ul>
 

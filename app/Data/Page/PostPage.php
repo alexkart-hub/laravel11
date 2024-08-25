@@ -10,7 +10,7 @@ use App\Models\BlogPost;
 class PostPage extends Page
 {
     private string $categoryCode;
-    private        $postCode;
+    private $postCode;
 
     public function getData(): PageDto
     {
@@ -37,12 +37,13 @@ class PostPage extends Page
     private function getPageData()
     {
         $post = $this->getPost();
-        if (is_null($post) || $post->category->slug !== $this->categoryCode) {
+        if (is_null($post)) {
             abort(404);
         }
         return [
-            'post'     => $post,
+            'post' => $post,
             'category' => $post->category,
+            'categoryChain' => $this->categoryCode,
         ];
     }
 }

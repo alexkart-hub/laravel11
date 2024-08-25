@@ -4,7 +4,7 @@
         /** @var  App\Data\Page\Dto\CategoriesPageDto $data */
             $categories = $data->categories;
     @endphp
-Categories
+<h1>Категории</h1>
 <ul class="menu">
     <li class="menu_item">
         <a class="menu_item_link" href="/">Главная</a>

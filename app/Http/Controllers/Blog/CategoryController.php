@@ -37,6 +37,7 @@ class CategoryController extends BaseController
      */
     public function show(string $category)
     {
+        dump($category);
         $page = (new CategoryPage())
             ->setCategoryCode($category);
 

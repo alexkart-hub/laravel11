@@ -10,6 +10,7 @@ class PostPageDto extends PageDto
 {
     public BlogPost $post;
     public BlogCategory $category;
+    public string $categoryChain;
 
     public static function createFromArray(array $data): static
     {

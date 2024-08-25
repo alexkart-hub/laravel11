@@ -27,17 +27,26 @@ class CategoryPage extends Page
 
     private function getAllCategories(): array
     {
-        $categories = BlogCategory::all();
+        $categories = BlogCategory::where(['level' => 1])->get();
         return ['categories' => $categories ?? []];
     }
 
     private function getCurrentCategory(string $categoryCode): array
     {
-        $category = BlogCategory::where('slug', $categoryCode)->first();
+        $arCode = explode('/', $categoryCode);
+        $slug = array_pop($arCode);
+        $parentCategory = !empty($arCode) ? implode('/', $arCode) : '';
+        $category = BlogCategory::where('slug', $slug)->first();
         if (is_null($category)) {
             abort(404);
         }
+        $categories = BlogCategory::where(['parent_id' => $category->id])->get();
         $posts = $category->posts;
-        return ['category' => $categoryCode, 'posts' => $posts];
+        return [
+            'category'      => $categoryCode,
+            'posts'         => $posts,
+            'categories'    => $categories,
+            'parentCategory'=> $parentCategory,
+        ];
     }
 }

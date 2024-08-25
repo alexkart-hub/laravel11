@@ -9,6 +9,8 @@ class CategoryPageDto extends PageDto
 {
     public string $category = '';
     public Collection $posts;
+    public Collection $categories;
+    public string $parentCategory = '';
 
     public static function createFromArray(array $data): static
     {
